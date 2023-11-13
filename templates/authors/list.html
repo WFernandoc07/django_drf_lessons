@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for object in object_list %}
+        <tr>
+          <td> {{ object.id }} </td>
+          <td> {{ object.name }} </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

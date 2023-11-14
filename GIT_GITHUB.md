@@ -30,3 +30,8 @@ git push -u origin main (nombre_rama)
 ```zsh 
 git branch -m main
 ```
+
+* Eliminar el repositorio remoto
+```zsh
+git remote remove origin
+```

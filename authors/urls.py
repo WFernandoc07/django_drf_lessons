@@ -1,9 +1,11 @@
-from django.urls import path
-from .views import IndexView, AuthorsListView, AuthorCreateView, AuthorUpdateView
+# from django.urls import path
+# from .views import fetch_all
+from rest_framework.routers import DefaultRouter
+from .views import AuthorViewSet
 
-urlpatterns = [
-  path('', IndexView.as_view(), name='hola_mundo'),
-  path('authors', AuthorsListView.as_view(), name='authors_list'),
-  path('authors/create', AuthorCreateView.as_view(), name='author_create'),
-  path('authors/<pk>/update', AuthorUpdateView.as_view(), name='author_update')
-]
+router = DefaultRouter()
+router.register('', AuthorViewSet, basename='authors')
+
+urlpatterns = router.urls
+    #path('', fetch_all, name='authors_list'),
+
